@@ -1,0 +1,233 @@
+body{
+    margin: 0px;
+    background-image: url("fundo.jpg");
+
+    min-height: 100vh;
+}
+
+.rowtop{
+    
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    background: linear-gradient(rgb(0, 0, 0),rgb(10,10,10));
+    height: auto;
+    
+}
+
+.rowtop_2{
+    
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    background: linear-gradient(rgb(10, 10, 10),rgb(15, 15, 15));
+    border-bottom: 0.15rem solid blueviolet;
+
+    
+}
+
+.pagebottom{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgb(10, 10, 10),rgb(15, 15, 15));
+    border-top: 0.15rem solid blueviolet;
+}
+
+
+.pagetop{
+    font-family: "Roboto Mono", Courier,Arial;
+    margin-left: 2%;
+    margin-right:2%;
+}
+
+.contact_data{
+    margin-left: 1%;
+    margin-bottom: 1%;
+}
+
+#email{
+    display: flex;
+    justify-content: flex-start;
+    gap: 2%;
+}
+
+
+
+.pagetop h1{
+    margin: 0px;
+    color: blueviolet;
+}
+
+.pagetop h2{
+    margin: 0px;
+    color:rgb(51, 51, 139);
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+    gap: 6%;
+}
+
+.about{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.data{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+}
+
+.bluetext{
+    color:  rgb(51, 51, 139);
+    font-family: "Roboto Mono",Arial;
+}
+
+.white_text{
+    color: white;
+    font-family: Arial;
+}
+
+.purple_text{
+    color:blueviolet;
+    font-family: "Roboto Mono";
+}
+
+.contact_text{
+    color: rgb(0, 191, 244);
+    font-family: Arial;
+}
+
+#linkedin{
+    margin-top: 2%;
+    width: 2.5rem;
+    height:auto;
+    max-width: 100%;
+}
+
+#github{
+    margin-top: 3%;
+    width: 2.2rem;
+    height: 2.2rem;
+    object-fit: contain;
+    max-width: 100%;
+}
+
+#vitor{
+    margin-top: 4%;
+    margin-left: 4%;
+    width: 20rem;
+    height: auto;
+}
+
+/* Animação*/
+
+.rowtop a {
+    position: relative; /* necessário para posicionar o círculo */
+    display: inline-block;
+}
+
+.rowtop a::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;            /* começa pequeno */
+    height: 0;           /* começa pequeno */
+    border: 2px dotted rgb(0, 191, 244); /* cor do círculo */
+    border-radius: 50%;  /* deixa redondo */
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    opacity: 0;          /* começa invisível */
+}
+
+.rowtop a:hover::after {
+    width: 1.5rem;         /* aumenta ao passar o mouse */
+    height: 1.5rem;
+    opacity: 1;          /* fica visível */
+}
+
+/* Media Query para Mobile */
+@media (max-width: 768px) {
+
+    body {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .rowtop, .rowtop_2 {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .pagetop {
+        margin: 0;
+    }
+
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    #vitor {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .data {
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .about {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        padding: 0 1rem;
+    }
+
+    .about p {
+        text-align: justify;
+        font-size: 0.95rem;
+    }
+
+    .pagebottom {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .contact_data {
+        margin: 0;
+    }
+
+    #email {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    #linkedin, #github {
+        width: 2rem;
+        height: auto;
+        margin: 0.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+}
