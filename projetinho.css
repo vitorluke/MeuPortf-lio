@@ -152,14 +152,11 @@ body{
     opacity: 1;          /* fica visível */
 }
 
-/* Media Query para Mobile */
 @media (max-width: 767px) {
-
     body {
-        background-size: cover;
-        background-position: center;
-        margin: 0;
-        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
     }
 
     .rowtop, .rowtop_2 {
@@ -169,23 +166,17 @@ body{
         width: 100%;
     }
 
-    .pagetop {
-        margin: 0;
-        text-align: center;
-    }
-
     .profile {
         flex-direction: column;
         align-items: center;
-        gap: 1.5rem;
+        gap: 2rem;
         width: 100%;
     }
 
     #vitor {
-        width: 90%;
+        width: 80%;
         height: auto;
         margin: 0 auto;
-        max-width: 300px;
     }
 
     .data {
@@ -207,25 +198,33 @@ body{
     }
 
     .pagebottom {
+        margin-top: auto; /* empurra para o final da tela */
         text-align: center;
         padding: 1rem;
         width: 100%;
+        display: flex;
+        flex-direction: column; /* força empilhar */
+        align-items: center;
     }
 
     .contact_data {
         margin: 0;
         width: 100%;
+        display: flex;
+        flex-direction: column; /* empilha os contatos */
+        align-items: center;
+        gap: 0.5rem;
     }
 
     #email {
-        flex-direction: column;
+        flex-direction: column; /* força coluna no celular */
         gap: 0.5rem;
         align-items: center;
         text-align: center;
     }
 
     #linkedin, #github {
-        width: 2.5rem;
+        width: 2rem;
         height: auto;
         margin: 0.5rem;
     }
