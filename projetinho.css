@@ -124,6 +124,12 @@ body{
     height: auto;
 }
 
+#texto_sobre{
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
 /* Animação*/
 
 .rowtop a {
