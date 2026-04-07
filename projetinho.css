@@ -125,9 +125,8 @@ body{
 }
 
 #texto_sobre{
-    margin-left: 10%;
-    margin-right: 10%;
-
+    width: min(80%, 900px);
+    margin: 0 auto;
 }
 
 /* Animação*/
