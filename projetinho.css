@@ -125,7 +125,7 @@ body{
 }
 
 #texto_sobre{
-    width: min(80%, 900px);
+    eidth-max:50%;
     margin: 0 auto;
 }
 
